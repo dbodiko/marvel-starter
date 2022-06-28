@@ -1,4 +1,3 @@
-
 class MarvelService {
     _apiBase = 'https://gateway.marvel.com:443/v1/public/'
     _apiKey = 'apikey=0c3ac07c8639617a58aeb82b028a9b83'
