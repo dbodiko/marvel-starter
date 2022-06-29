@@ -15,7 +15,7 @@ class MarvelService {
         debugger
 
         const res = await this.getResource(`${this._apiBase}characters?limit=9&offset=351&${this._apiKey}`)
-        return res.data.results.map(this._transformCharacter())
+        return res.data.results.map(this._transformCharacter)
     }
 
     getCharacter = async (id) => {
@@ -30,7 +30,8 @@ class MarvelService {
             description: char.description.length > 100 ? (`${char.description.slice(0,150)}...`) : char.description,
             thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
             homepage: char.urls[0].url,
-            wiki: char.urls[1].url
+            wiki: char.urls[1].url,
+            comics: char.comics.items
         }
     }
 }
